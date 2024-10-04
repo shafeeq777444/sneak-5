@@ -135,13 +135,13 @@ const Cart = () => {
             ))}
           </div>
 
-          {/* Display Total Price */}
+     
           <div className="mt-4 p-4 border border-gray-300 rounded-lg shadow-sm">
             <h3 className="text-lg font-medium">Total Price</h3>
             <p className="text-xl font-bold">${totalPrice.toFixed(2)}</p>
           </div>
 
-          {/* UPI Modal */}
+        
           <UpiModal
             isOpen={isModalOpen}
             onClose={() => setModalOpen(false)}

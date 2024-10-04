@@ -17,40 +17,12 @@ const NavBar = () => {
     
     
     const handleProfile = () => {
-    
-        
             setProfile(!profile);
-
     };
 
-   
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-
-      
-        if (scrollY > lastScrollY) {
-            setIsVisible(false);
-        } else {
-            
-            setIsVisible(true);
-        }
-
-     
-        setLastScrollY(scrollY);
-    };
-
-    useEffect(() => {
-        
-        window.addEventListener('scroll', handleScroll);
-
-    
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [lastScrollY]);
 
     return (
-        <div className={`sticky top-0 z-20 bg-gray-100 shadow transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className={`sticky top-0 z-20 bg-gray-100 shadow transition-transform duration-300 `}>
             <header className="flex items-center justify-between h-16 px-3 md:px-16 max-w-full overflow-hidden">
                 <img className="w-24" src={sneakLogo} alt="SNEAK" />
 
@@ -97,7 +69,7 @@ const NavBar = () => {
             </header>
 
           
-            {profile && <Profile />} 
+            {profile && <Profile handleProfile={handleProfile}/>} 
             {showSearch&& <Search/>}
         </div>
     );

@@ -1,8 +1,9 @@
 // UpiModal.js
 import React from 'react';
+import { useState } from 'react';
 
 const UpiModal = ({ isOpen, onClose, onSubmit }) => {
-    const [upiId, setUpiId] = React.useState('');
+    const [upiId, setUpiId] = useState('');
 
     if (!isOpen) return null;
 

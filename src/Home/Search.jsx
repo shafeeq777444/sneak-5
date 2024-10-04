@@ -39,7 +39,7 @@ const Search = () => {
   return (
     <>
       {isSearchVisible && ( 
-        <div className="relative flex w-full flex-col rounded-lg border border-slate-200 bg-white shadow-sm p-4">
+        <div className="relative  flex w-full flex-col rounded-lg border border-slate-200 bg-white shadow-sm p-4">
    
           <form className="mb-4">
             <input
