@@ -1,0 +1,90 @@
+/* ResponsiveCarousel.css */
+
+
+.main-div {
+  display: flex;
+  padding: 8rem;
+  position: relative; /* Needed for absolute positioning of the carousel */
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+
+
+.description {
+  width: 50%;
+}
+
+
+
+/* New styles for the gradient background */
+.gradient-background {
+  width: 50%; /* Smaller width for the gradient div */
+  position: absolute; /* Position it correctly */
+  top: 10%; /* Adjust position as needed */
+  left: 0; /* Align to the left */
+  background: linear-gradient(to top right, hsl(0, 0%, 96%), hsl(0, 0%, 100%));
+  border-radius: 10px; /* Rounded corners */
+  padding: 2rem; /* Add padding for aesthetics */
+  z-index: 0; /* Behind the carousel */
+}
+
+.description{
+  font-size: .8rem;
+}
+.carousel {
+  width: 100%; /* Set to full width for a larger image size */
+  max-width: 900px; /* Set a max-width for better responsiveness */
+}
+.main-div {
+  display: flex;
+  padding: 8rem; /* Padding added for spacing */
+  position: relative; /* Needed for absolute positioning of the carousel */
+}
+
+.carousel .carousel-item {
+  
+  opacity: 0;
+  transform: translateX(50px) translateZ(-100px) scale(0.7);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  border-radius: 15px;
+
+}
+
+.carousel .carousel-item.active {
+ 
+  opacity: 1;
+  transform: translateX(0) translateZ(0) scale(1);
+  border-radius: 15px;
+
+}
+.h1 {
+  font-size: 3rem; /* Larger font size for h1 */
+  color: black; /* Black text color */
+}
+.description {
+  width: 50%; /* Set width to 50% */
+  font-size: 0.8rem; /* Smaller font size */
+}
+
+@media (max-width:486px) {
+  .description{
+    width: 100%;
+    font-size: .5rem;
+    margin-bottom: 1rem;
+  }
+  .main-div{
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+  }
+  .h1 {
+    font-size: 2rem; /* Larger font size for h1 */
+    color: black; /* Black text color */
+  }
+  .h4{
+    font-size: .7rem;
+  }
+}
