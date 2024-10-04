@@ -12,27 +12,14 @@ import NavBar from "./Home/NavBar.jsx";
 
 function App() {
   return (
-    // <ProductProvider>
-    //   <CartProvider>
-    //     <Router>
-    //       <Routes>
-    //         <Route path="/register" element={<Register />} />
-    //         <Route path="/" element={<Login />} />
-    //         <Route path="/home" element={<Home />} >
-    //         <Route path="men" element={<MenCard />} /> {/* Corrected path */}
-    //         <Route path="women" element={<WomenCard />} /> {/* Corrected path */}
-    //         <Route path="cart" element={<Cart />} /> {/* Corrected path */}</Route>
-    //       </Routes>
-    //     </Router>
-    //   </CartProvider>
-    // </ProductProvider>
+
     <ProductProvider>
     <CartProvider>
       <Router>
           <Routes>
               <Route path="/register" element={<Register />} />
-              <Route path="/" element={<Login />} />
-              <Route path="/home" element={<Home />}>
+              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<Home />}>
                   <Route index element={<ResponsiveCarousel />} />
                   <Route path="men" element={<MenCard />} />
                   <Route path="women" element={<WomenCard />} />

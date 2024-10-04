@@ -1,13 +1,17 @@
 // UpiModal.js
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
+import { CartContext } from './CartContext';
+
 
 const UpiModal = ({ isOpen, onClose, onSubmit }) => {
+    const {setCartItems}=useContext(CartContext)
     const [upiId, setUpiId] = useState('');
 
     if (!isOpen) return null;
 
     const handleSubmit = () => {
+        setCartItems([])
         onSubmit(upiId);
         onClose(); // Close modal after submitting
     };

@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import UpiModal from './UpiModal'; // Make sure the path is correct
 
 const Cart = () => {
-  const { userData, updateCartItemQuantity, removeCartItem, cartItems } = useContext(CartContext);
+  const { userData, updateCartItemQuantity, removeCartItem, cartItems,clearCartItems } = useContext(CartContext);
   
   // State to control modal visibility
   const [isModalOpen, setModalOpen] = useState(false);
@@ -146,6 +146,7 @@ const Cart = () => {
             isOpen={isModalOpen}
             onClose={() => setModalOpen(false)}
             onSubmit={(upiId) => {
+
               console.log("UPI ID submitted:", upiId);
               // Implement your payment logic here
             }}

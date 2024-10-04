@@ -25,7 +25,7 @@ const ImageCarousel = () => {
         
           <div className="carousel-wrapper">
       <div className="carousel-div">
-        <Carousel className='carousel'  interval={2000} controls={false}>
+        <Carousel className='carousel'  interval={1500} controls={false}>
           <Carousel.Item className="carousel-item">
             <img className="carousel-image" src="/assets/carousel/shoe-1.png" alt="First slide" />
           </Carousel.Item>

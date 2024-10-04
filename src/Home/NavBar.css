@@ -46,7 +46,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 5rem;
-    padding: 3.2rem 5rem 3rem 4rem;
+    padding: 3rem 16rem 3rem 16rem;
 }
 
 .navbar {
@@ -75,6 +75,19 @@ header {
 .cart-icon {
     width: 1.4rem;
 
+}
+.navbar-cart-main-div{
+    display: flex;
+}
+
+.navbar-cart-length{
+position: relative;
+    font-size: 0.8rem;
+    bottom: 0.3rem;
+    right: 0.2rem;
+    /* top:1.5rem; */
+    /* right: 1rem;  */
+    z-index: 2;
 }
 .nav-logo{
     width:20rem

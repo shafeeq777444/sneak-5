@@ -105,7 +105,7 @@ const Register = () => {
           <div className="py-12 text-center">
             <p className="whitespace-nowrap text-gray-600">
               Already have an account?
-              <button onClick={() => navigate("/")} className="underline-offset-4 font-semibold text-gray-900 underline">
+              <button onClick={() => navigate("/login")} className="underline-offset-4 font-semibold text-gray-900 underline">
                 Log in
               </button>
             </p>

@@ -3,6 +3,8 @@ import { Formik, Form, Field } from "formik";
 import { loginValidation } from "./loginValidation";
 import axios from "axios";
 import './login.css';
+import { useContext } from "react";
+import { ProductContext } from "../Product/ProductContext";
 
 const Login = () => {
   const color={
@@ -13,7 +15,6 @@ const Login = () => {
     email: "",
     password: "",
   };
-
   const handleSubmit = async (values) => {
     try {
       const response = await axios.get("http://localhost:5001/users");
@@ -22,7 +23,9 @@ const Login = () => {
       const user = users.find(u => u.email === values.email && u.password === values.password);
       if (user) {
         localStorage.setItem("user", JSON.stringify(user)); 
-        navigate("/home");
+        navigate("/");
+        window.location.reload()
+        
       } else {
         alert("Invalid email or password");
       }

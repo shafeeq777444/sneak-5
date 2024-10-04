@@ -7,13 +7,14 @@ import { CartContext } from "../cart/CartContext";
 import Profile from "../userProfile/Profile";
 import Search from "./Search";
 
+
 const NavBar = () => {
     const navigate = useNavigate();
-    const [isVisible, setIsVisible] = useState(true);
-    const [lastScrollY, setLastScrollY] = useState(0);
+    const {cartItems,userData,totalQuantity}=useContext(CartContext)
+   
     const [profile, setProfile] = useState(false);
     const [showSearch,setShowSearch]=useState(false);
-    const { userData, cartItems } = useContext(CartContext);
+
     
     
     const handleProfile = () => {
@@ -28,7 +29,7 @@ const NavBar = () => {
 
                 <div className="flex items-center space-x-3 md:space-x-8">
                     <NavLink 
-                        to="/home" 
+                        to="/" 
                         className={({ isActive  }) => 
                             `font-semibold ${isActive && window.location=="/home" ? 'text-black' : 'text-gray-500'}`
                         }
@@ -36,7 +37,7 @@ const NavBar = () => {
                         Popular
                     </NavLink>
                     <NavLink
-                        to="/home/women"
+                        to="/women"
                         className={({ isActive }) => 
                             `font-semibold ${isActive ? 'text-black' : 'text-gray-500'}`
                         }
@@ -44,7 +45,7 @@ const NavBar = () => {
                         Women
                     </NavLink>
                     <NavLink
-                        to="/home/men"
+                        to="/men"
                         className={({ isActive }) => 
                             `font-semibold ${isActive ? 'text-black' : 'text-gray-500'}`
                         }
@@ -57,12 +58,12 @@ const NavBar = () => {
                         <NavLink onClick={()=>setShowSearch(!showSearch)} className="flex items-center justify-center p-2 border border-gray-300 rounded-lg">
                             <FaSearch className="text-gray-600" />
                         </NavLink>
-                        <Link to='/home/cart'>
-                            {cartItems.length}
+                        <Link className="navbar-cart-main-div" to='/cart'>
                             <img className="w-6" src="/assets/extra/cart.png" alt="cart" />
+                            <div className="navbar-cart-length">{totalQuantity==0?null:cartItems.length}</div>
                         </Link>
                         <Link to="#" onClick={handleProfile}>
-                            <img className="w-6" src="/assets/extra/user-profile.png" alt="user-profile" />
+                            <img className="w-6 rounded-md" src={userData?"/assets/extra/userProfile.jpg":"/assets/extra/user-profile.png"} alt="user-profile" />
                         </Link>
                     </div>
                 </div>

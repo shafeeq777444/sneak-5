@@ -9,9 +9,11 @@ const Search = () => {
   const [searchValue, setSearch] = useState('');
   const [filterItems, setFilterItems] = useState([]);
   const [isSearchVisible, setSearchVisible] = useState(true); 
-
+  const [isVisible, setIsVisible] = useState(true);
   const { allProducts } = useContext(ProductContext);
-
+  const hidePopup = () => {
+    setIsVisible(false);
+};
   useEffect(() => {
     const Items = allProducts.filter(item =>
       item.name.toLowerCase().includes(searchValue.toLowerCase())
@@ -19,7 +21,25 @@ const Search = () => {
     setFilterItems(Items);
   }, [searchValue, allProducts]);
 
-  
+  useEffect(() => {
+    const handleScroll = () => {
+        hidePopup();
+    };
+
+    const handleTouchStart = () => {
+        hidePopup();
+    };
+
+    // Adding event listeners
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('touchstart', handleTouchStart);
+
+    // Cleanup function to remove event listeners
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+        window.removeEventListener('touchstart', handleTouchStart);
+    };
+}, []);
   const handleCardClick = (item) => {
     setProduct(item); 
     setModalOpen(true);

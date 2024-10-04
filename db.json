@@ -22,17 +22,17 @@
           "quantity": 1
         },
         {
-          "id": "1",
-          "name": "Air Force",
-          "Description": "Low retro prm",
-          "price": 8100,
-          "oldPrice": 13500,
+          "id": "16",
+          "name": "Nike Zoom Pegasus 37",
+          "Description": "The next generation of Pegasus",
+          "price": 9000,
+          "oldPrice": 13000,
           "pic": [
-            "/assets/men/air.png",
-            "/assets/men/air.png"
+            "/assets/women/zoom_pegasus_37.png",
+            "/assets/women/zoom_pegasus_37.png"
           ],
-          "sex": "male",
-          "productCode": "AFM001",
+          "sex": "female",
+          "productCode": "NZP001",
           "quantity": 1
         }
       ],
