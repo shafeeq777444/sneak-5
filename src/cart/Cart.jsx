@@ -148,7 +148,9 @@ const Cart = () => {
               isOpen={isModalOpen}
               onClose={() => setModalOpen(false)}
               onSubmit={(upiId) => {
+                setModalOpen(false)
                 console.log("UPI ID submitted:", upiId);
+                clearCartItems();
               }}
             />
           </>

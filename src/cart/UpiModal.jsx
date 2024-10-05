@@ -29,7 +29,7 @@ const UpiModal = ({ isOpen, onClose, onSubmit }) => {
                 />
                 <div className="flex justify-between">
                     <button onClick={onClose} className="bg-gray-300 text-black rounded px-4 py-2">Cancel</button>
-                    <button onClick={handleSubmit} className="bg-blue-600 text-white rounded px-4 py-2">Pay</button>
+                    <button onClick={onSubmit} className="bg-blue-600 text-white rounded px-4 py-2">Pay</button>
                 </div>
             </div>
         </div>

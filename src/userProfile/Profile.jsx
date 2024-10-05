@@ -44,6 +44,7 @@ const Profile = ({ handleProfile }) => {
         return (
             <div className="profile-main">
                 <div className="profile-inner-main">
+                <button className="profile-close  white" onClick={handleProfile}>X</button>
                     <img className="profile-img" src="/assets/extra/userProfile.jpg"></img>
                     <div className="profile-texts-div">
                         <p className="profile-id">User Id : {userData?.id}</p>
@@ -52,14 +53,16 @@ const Profile = ({ handleProfile }) => {
                         <button className="profile-button" onClick={handleLogout}>
                             Logout
                         </button>
-                    
+                        
                 </div>
+                
             </div>
         );
     } else if(!userData){
         return (
-            <div className="profile-login">
-                <button onClick={handleLogout}>logIn</button>
+            <div >
+                <button className="profile-login-close  black" onClick={handleProfile}>X</button>
+                <button className="profile-login" onClick={handleLogout}>logIn</button>
             </div>
         );
     }
