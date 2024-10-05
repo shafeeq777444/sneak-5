@@ -20,6 +20,20 @@
           "sex": "female",
           "productCode": "NRIW001",
           "quantity": 4
+        },
+        {
+          "id": "16",
+          "name": "Nike Zoom Pegasus 37",
+          "Description": "The next generation of Pegasus",
+          "price": 9000,
+          "oldPrice": 13000,
+          "pic": [
+            "/assets/women/zoom_pegasus_37.png",
+            "/assets/women/zoom_pegasus_37.png"
+          ],
+          "sex": "female",
+          "productCode": "NZP001",
+          "quantity": 1
         }
       ],
       "whishlist": [],
