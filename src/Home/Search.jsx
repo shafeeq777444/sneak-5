@@ -21,25 +21,7 @@ const Search = () => {
     setFilterItems(Items);
   }, [searchValue, allProducts]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-        hidePopup();
-    };
-
-    const handleTouchStart = () => {
-        hidePopup();
-    };
-
-    // Adding event listeners
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('touchstart', handleTouchStart);
-
-    // Cleanup function to remove event listeners
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-        window.removeEventListener('touchstart', handleTouchStart);
-    };
-}, []);
+ 
   const handleCardClick = (item) => {
     setProduct(item); 
     setModalOpen(true);
@@ -62,11 +44,12 @@ const Search = () => {
         <div className="relative  flex w-full flex-col rounded-lg border border-slate-200 bg-white shadow-sm p-4">
    
           <form className="mb-4">
+            <div className="search-close-btn-div"><button className='search-close'>X</button></div>
             <input
               value={searchValue}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search for products..."
-              className="w-full p-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-2 border border-slate-300 rounded-lg focus:outline-none "
             />
           </form>
 

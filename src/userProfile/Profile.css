@@ -54,6 +54,9 @@
     color: white;
     text-align: center;
 }
+.profile-login:hover{
+    background-color: rgb(74, 22, 22);
+}
 .profile-login-close{
     color: rgb(255, 255, 255);
     margin-top: 1rem;

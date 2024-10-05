@@ -58,10 +58,10 @@ const Profile = ({ handleProfile }) => {
                 
             </div>
         );
-    } else if(!userData){
+    } else if(!userData && isVisible){
         return (
             <div >
-                <button className="profile-login-close  black" onClick={handleProfile}>X</button>
+    
                 <button className="profile-login" onClick={handleLogout}>logIn</button>
             </div>
         );
