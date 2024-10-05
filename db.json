@@ -8,32 +8,32 @@
       "cpassword": "12344321",
       "cart": [
         {
-          "id": "15",
-          "name": "Nike React Infinity Run",
-          "Description": "Run longer, run safer",
-          "price": 11500,
-          "oldPrice": 15000,
+          "id": "2",
+          "name": "Air Max 1",
+          "Description": "Max 1 Classic sneaker",
+          "price": 10559,
+          "oldPrice": 18500,
           "pic": [
-            "/assets/women/react_infinity_run.png",
-            "/assets/women/react_infinity_run.png"
+            "/assets/men/AIR+MAX+90 (1).png",
+            "/assets/men/AIR+MAX+90 (1).png"
           ],
-          "sex": "female",
-          "productCode": "NRIW001",
-          "quantity": 1
+          "sex": "male",
+          "productCode": "AMM001",
+          "quantity": 4
         },
         {
-          "id": "16",
-          "name": "Nike Zoom Pegasus 37",
-          "Description": "The next generation of Pegasus",
-          "price": 9000,
-          "oldPrice": 13000,
+          "id": "1",
+          "name": "Air Force",
+          "Description": "Low retro prm",
+          "price": 8100,
+          "oldPrice": 13500,
           "pic": [
-            "/assets/women/zoom_pegasus_37.png",
-            "/assets/women/zoom_pegasus_37.png"
+            "/assets/men/air.png",
+            "/assets/men/air.png"
           ],
-          "sex": "female",
-          "productCode": "NZP001",
-          "quantity": 1
+          "sex": "male",
+          "productCode": "AFM001",
+          "quantity": 2
         }
       ],
       "whishlist": [],
