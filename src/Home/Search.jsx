@@ -14,6 +14,9 @@ const Search = () => {
   const hidePopup = () => {
     setIsVisible(false);
 };
+
+
+ 
   useEffect(() => {
     const Items = allProducts.filter(item =>
       item.name.toLowerCase().includes(searchValue.toLowerCase())
@@ -78,11 +81,10 @@ const Search = () => {
         </div>
       )}
 
-      {/* Render the modal if a product is selected */}
       <ProductModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        product={product} // Pass the selected product to the modal
+        product={product}
       />
     </>
   );

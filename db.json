@@ -19,7 +19,7 @@
           ],
           "sex": "male",
           "productCode": "AMM001",
-          "quantity": 4
+          "quantity": 5
         },
         {
           "id": "1",
@@ -34,6 +34,34 @@
           "sex": "male",
           "productCode": "AFM001",
           "quantity": 2
+        },
+        {
+          "id": "7",
+          "name": "Nike Air Dunk",
+          "Description": "Dunk Jump Model",
+          "price": 8549,
+          "oldPrice": 15000,
+          "pic": [
+            "/assets/men/NIKE+AIR+DUNK+LOW+JUMBO.png",
+            "/assets/men/NIKE+AIR+DUNK+LOW+JUMBO.png"
+          ],
+          "sex": "male",
+          "productCode": "NAD001",
+          "quantity": 1
+        },
+        {
+          "id": "15",
+          "name": "Nike React Infinity Run",
+          "Description": "Run longer, run safer",
+          "price": 11500,
+          "oldPrice": 15000,
+          "pic": [
+            "/assets/women/react_infinity_run.png",
+            "/assets/women/react_infinity_run.png"
+          ],
+          "sex": "female",
+          "productCode": "NRIW001",
+          "quantity": 1
         }
       ],
       "whishlist": [],

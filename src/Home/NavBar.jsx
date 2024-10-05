@@ -31,7 +31,7 @@ const NavBar = () => {
                     <NavLink 
                         to="/" 
                         className={({ isActive  }) => 
-                            `font-semibold ${isActive && window.location=="/home" ? 'text-black' : 'text-gray-500'}`
+                            `font-semibold ${isActive ? 'text-black' : 'text-gray-500'}`
                         }
                     >
                         Popular
@@ -55,7 +55,7 @@ const NavBar = () => {
 
                     
                     <div  className="flex items-center space-x-4">
-                        <NavLink onClick={()=>setShowSearch(!showSearch)} className="flex items-center justify-center p-2 border border-gray-300 rounded-lg">
+                        <NavLink  onClick={()=>setShowSearch(!showSearch)} className="flex items-center justify-center p-2 border border-gray-300 rounded-lg">
                             <FaSearch className="text-gray-600" />
                         </NavLink>
                         <Link className="navbar-cart-main-div" to='/cart'>

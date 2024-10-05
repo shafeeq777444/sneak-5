@@ -1,4 +1,5 @@
 .modal-overlay {
+    /* width: 100%; */
     position: fixed;
     top: 0;
     left: 0;
@@ -12,8 +13,10 @@
 }
 
 .modal-content {
-    background: white;
-    padding: 20px;
+    width: 1rem;
+    width: 20%;
+    background: #fd0000;
+    /* padding: 20px; */
     border-radius: 8px;
     width: 400px; /* Set a fixed width for the modal */
     position: relative;
@@ -23,12 +26,19 @@ img{
 }
 
 .close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: black;
     position: absolute;
     top: 10px;
-    right: 10px;
-    border: none;
-    background: none;
-    font-size: 24px;
+    right: 13px;
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1rem;
     cursor: pointer;
 }
 
@@ -49,6 +59,9 @@ img{
 }
 .modal-price{
     color: black;
+    font-weight: 900;
+    position: relative;
+    bottom: 3rem;
 }
 .modal-description{
     position:relative;
@@ -61,16 +74,34 @@ img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 .modal-bag{
     margin-top: 1rem;
     background-color: black;
     color: white;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+}
+.modal-bag:hover{
+    margin-top: 1rem;
+    background-color: rgb(98, 66, 66);
+    color: white;
+    padding: 0.5rem 1rem;
     border-radius: 2rem;
 }
 @media (max-width:486px){
     .modal-content{
-       transform: scale(0.75);
+       transform: scale(1);
+       width: 50%;
+    }
+    .modal-card{
+        width: 15rem;
+    }
+    .close-button {
+        position: relative;
+        left: 6rem;
+        top: 2.5rem;
+        z-index: 12222;
     }
 }

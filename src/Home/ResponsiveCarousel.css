@@ -101,3 +101,19 @@ h4 {
   align-items: center;
   justify-content: center;
 }
+.carousel .carousel-item-add {
+
+  opacity: 0;
+  transform: translateX(50px) translateZ(-100px) scale(0.7);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  border-radius: 15px;
+
+}
+
+.carousel .carousel-item-add.active {
+
+  opacity: 1;
+  transform: translateX(0) translateZ(0) scale(1);
+  border-radius: 15px;
+
+}
