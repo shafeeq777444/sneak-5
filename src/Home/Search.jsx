@@ -3,7 +3,7 @@ import { ProductContext } from '../Product/ProductContext';
 import './search.css';
 import ProductModal from '../modal/ProductModal';
 
-const Search = () => {
+const Search = ({handleSearch}) => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [product, setProduct] = useState(null); 
   const [searchValue, setSearch] = useState('');
@@ -47,7 +47,7 @@ const Search = () => {
         <div className="relative  flex w-full flex-col rounded-lg border border-slate-200 bg-white shadow-sm p-4">
    
           <form className="mb-4">
-            <div className="search-close-btn-div"><button className='search-close'>X</button></div>
+            <div onClick={handleSearch} className="search-close-btn-div"><button className='search-close'>x</button></div>
             <input
               value={searchValue}
               onChange={(e) => setSearch(e.target.value)}

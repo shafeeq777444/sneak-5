@@ -20,6 +20,9 @@ const NavBar = () => {
     const handleProfile = () => {
             setProfile(!profile);
     };
+    const handleSearch=()=>{
+        setShowSearch(!showSearch)
+    }
 
 
     return (
@@ -71,7 +74,7 @@ const NavBar = () => {
 
           
             {profile && <Profile handleProfile={handleProfile}/>} 
-            {showSearch&& <Search/>}
+            {showSearch&& <Search handleSearch={handleSearch}/>}
         </div>
     );
 };
