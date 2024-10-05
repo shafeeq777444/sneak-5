@@ -80,3 +80,11 @@
     color: white;
 }
 
+@media (max-width:486){
+    .profile-inner-main{
+        width:1rem;
+    }
+    .profile-main{
+        width: 1rem;
+    }
+}

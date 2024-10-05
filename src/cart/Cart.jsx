@@ -3,7 +3,7 @@ import { CartContext } from './CartContext';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import UpiModal from './UpiModal'; // Make sure the path is correct
-
+import './Cart.css'
 const Cart = () => {
   const { userData, updateCartItemQuantity, removeCartItem, clearCartItems, cartItems, d, userId, quantity } = useContext(CartContext);
   
@@ -114,23 +114,23 @@ const Cart = () => {
                     <h3 className="text-lg font-medium">{item.name}</h3>
                     <p className="text-gray-500">${item.price}</p>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="button-div flex items-center space-x-2">
                     <button
                       onClick={() => updateCartItemQuantity(item, 1)}
-                      className="px-2 py-1 bg-green-500 text-white rounded"
+                      className="px-1 py-0.5  text-black rounded"
                     >
                       +
                     </button>
                     <span>{item.quantity}</span>
                     <button
                       onClick={() => updateCartItemQuantity(item, -1)}
-                      className="px-2 py-1 bg-yellow-500 text-white rounded"
+                      className="px-1 py-0.5  text-black rounded"
                     >
                       -
                     </button>
                     <button
                       onClick={() => removeCartItem(item)}
-                      className="px-2 py-1 bg-red-500 text-white rounded"
+                      className="px-2 py-1 text-xl text-black rounded-2xl"
                     >
                       x
                     </button>

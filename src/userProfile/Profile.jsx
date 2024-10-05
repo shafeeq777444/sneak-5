@@ -25,25 +25,25 @@ const Profile = ({ handleProfile }) => {
             hidePopup();
         };
 
-        const handleTouchStart = () => {
-            hidePopup();
-        };
+        // const handleTouchStart = () => {
+            // hidePopup();
+        // };
 
         // Adding event listeners
         window.addEventListener('scroll', handleScroll);
-        window.addEventListener('touchstart', handleTouchStart);
+        // window.addEventListener('touchstart', handleTouchStart);
 
         // Cleanup function to remove event listeners
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            window.removeEventListener('touchstart', handleTouchStart);
+            // window.removeEventListener('touchstart', handleTouchStart);
         };
     }, []);
     console.log(userData, "hello");
     if (userData && isVisible) {
         return (
-            <div className="profile-main">
-                <div className="profile-inner-main">
+            <div className="profile-main md:z-50 ">
+                <div className="profile-inner-main ">
                 <button className="profile-close  white" onClick={handleProfile}>X</button>
                     <img className="profile-img" src="/assets/extra/userProfile.jpg"></img>
                     <div className="profile-texts-div">

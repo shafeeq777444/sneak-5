@@ -8,48 +8,6 @@
       "cpassword": "12344321",
       "cart": [
         {
-          "id": "2",
-          "name": "Air Max 1",
-          "Description": "Max 1 Classic sneaker",
-          "price": 10559,
-          "oldPrice": 18500,
-          "pic": [
-            "/assets/men/AIR+MAX+90 (1).png",
-            "/assets/men/AIR+MAX+90 (1).png"
-          ],
-          "sex": "male",
-          "productCode": "AMM001",
-          "quantity": 5
-        },
-        {
-          "id": "1",
-          "name": "Air Force",
-          "Description": "Low retro prm",
-          "price": 8100,
-          "oldPrice": 13500,
-          "pic": [
-            "/assets/men/air.png",
-            "/assets/men/air.png"
-          ],
-          "sex": "male",
-          "productCode": "AFM001",
-          "quantity": 2
-        },
-        {
-          "id": "7",
-          "name": "Nike Air Dunk",
-          "Description": "Dunk Jump Model",
-          "price": 8549,
-          "oldPrice": 15000,
-          "pic": [
-            "/assets/men/NIKE+AIR+DUNK+LOW+JUMBO.png",
-            "/assets/men/NIKE+AIR+DUNK+LOW+JUMBO.png"
-          ],
-          "sex": "male",
-          "productCode": "NAD001",
-          "quantity": 1
-        },
-        {
           "id": "15",
           "name": "Nike React Infinity Run",
           "Description": "Run longer, run safer",
@@ -61,6 +19,20 @@
           ],
           "sex": "female",
           "productCode": "NRIW001",
+          "quantity": 1
+        },
+        {
+          "id": "16",
+          "name": "Nike Zoom Pegasus 37",
+          "Description": "The next generation of Pegasus",
+          "price": 9000,
+          "oldPrice": 13000,
+          "pic": [
+            "/assets/women/zoom_pegasus_37.png",
+            "/assets/women/zoom_pegasus_37.png"
+          ],
+          "sex": "female",
+          "productCode": "NZP001",
           "quantity": 1
         }
       ],
